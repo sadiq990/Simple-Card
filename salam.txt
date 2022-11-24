@@ -1,0 +1,107 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+void main (){
+  runApp(myApp());
+}
+
+class myApp extends StatelessWidget {
+  const myApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xff7B1FA2),
+        body: SafeArea(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(
+                  height: 80.0,
+                ),
+                CircleAvatar(
+                  radius: 90.0,
+                  backgroundColor: Colors.teal[500],
+                  backgroundImage: AssetImage('images/personmale.jpg'),
+                ),
+                SizedBox(
+                  height: 15.0,
+                ),
+                Text('Rose Anderson',style: GoogleFonts.roboto(
+                  color: Colors.white,
+                  fontSize: 35.0,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 3,
+                ),),
+                SizedBox(
+                  height: 5.0,
+                ),
+                Text('Frontend Developer',style: GoogleFonts.roboto(
+                  color: Colors.white,
+                  fontSize: 15.0,
+                  letterSpacing: 7,
+
+                ),),
+                Card(
+
+                  color: Color(0xffE1BEE7),
+                  margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: <Widget> [
+                          Icon(
+                            Icons.phone,
+                            color: Color(0xff7C4DFF),
+                          ),
+                          SizedBox(
+                            width: 40.0,
+                          ),
+                        Text('+994 200 200 00 00' ,style:GoogleFonts.openSans(
+                          color: Color(0xff212121),
+                          // fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+
+                  color: Color(0xffE1BEE7),
+                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 50),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        children: <Widget> [
+                          Icon(
+                            Icons.mail,
+                            color: Color(0xff7C4DFF),
+                          ),
+                          SizedBox(
+                            width: 40.0,
+                          ),
+                          Text('rosea@bp.com' ,style:GoogleFonts.openSans(
+                            color: Color(0xff212121),
+                            // fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
